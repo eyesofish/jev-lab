@@ -1,0 +1,6 @@
+# 环境与权重不进版本库
+.venv/
+model/
+__pycache__/
+*.pyc
+.DS_Store

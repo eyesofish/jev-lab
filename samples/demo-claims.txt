@@ -1,0 +1,7 @@
+# 一行一条陈述。前两条应当被"支持"，第三条应当被"反驳"，
+# 第四条是上下文没提的信息（预期 neutral），最后一条是个陷阱：看似合理但没依据。
+The interview was moved to Wednesday.
+The recruiter agreed to the new date.
+The candidate cancelled the interview.
+The interview will take place on a weekend.
+The candidate is the strongest applicant for the role.
