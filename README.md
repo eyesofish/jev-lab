@@ -32,6 +32,9 @@ bash setup.sh    # 拉建模代码 + 0.8B 权重（约 1.6 GB）+ 建 .venv
 
 需要 `uv`（推荐）或 `python3`；不需要 GPU。
 
+📖 **傻瓜教程（每一步都可直接复制粘贴，含真实输出）**：[`docs/tutorial.md`](docs/tutorial.md)
+🤖 **用 Coding Agent 来玩**：先让它读 [`AGENTS.md`](AGENTS.md)
+
 ## 三个动词 ↔ 三种原语
 
 | 动词 | 对应官方原语 | 做什么 | 输出 |
@@ -91,7 +94,9 @@ bash setup.sh    # 拉建模代码 + 0.8B 权重（约 1.6 GB）+ 建 .venv
   多问题是 `jev.py` 里循环拼出来的。
 - **没有校准**：概率就是 softmax，`jev.py` 里"高/中/低"三档是抄官方文档的**用法示范**，
   不是可信阈值。
-- 训练主力语言是英文：中文材料能传，但别指望准。
+- **语言**：TypeSafe 文档说 Jev 以英文为主、CJK 精度更低——那是**关于 Jev 的说法**，我们无法验证。
+  在本仓库的 0.8B 复刻上，`samples/*.zh.txt` 那组中文例句反而比对应英文更干脆
+  （第 2 条 0.922 vs 0.518）。所以别把"中文更差"当已知事实，用你自己的材料测。
 - 0.8B 很小，"方向对但只有 0.518"这种模糊判断是常态。
 
 ## 结构
@@ -101,8 +106,11 @@ jev-lab/
 ├── jev.py                 # claim / choice / score / predict
 ├── setup.sh               # 拉建模代码 + 权重 + 建 venv
 ├── requirements.txt
-├── samples/               # 一段上下文 + 五条陈述（含一条"看似合理但无依据"的陷阱）
-└── docs/jev-notes.md      # 研究笔记：Jev 是什么、概率怎么做出来的、争议与来源
+├── AGENTS.md              # 给 Coding Agent 的说明与禁令
+├── samples/               # 英/中两套例句（各含一条"看似合理但无依据"的陷阱）
+└── docs/
+    ├── tutorial.md        # 傻瓜教程：每条命令都可复制粘贴
+    └── jev-notes.md       # 研究笔记：Jev 是什么、概率怎么做出来的、争议与来源
 ```
 
 ## 致谢与许可
