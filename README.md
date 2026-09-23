@@ -107,9 +107,10 @@ jev-lab/
 
 ## 致谢与许可
 
+本仓库自身代码以 MIT 许可发布，见 [`LICENSE`](LICENSE)。
+
 本仓库**不分发**模型权重，也不内联上游建模代码：`setup.sh` 在运行时从
 [`AlexWortega/openjev`](https://huggingface.co/AlexWortega/openjev) 拉取，
-该模型仓库以 MIT 许可发布，模型、训练数据与 `modeling_openjev.py` 的功劳全归其作者。
-本仓库自身代码以 MIT 许可发布，见 [`LICENSE`](LICENSE)。
+该模型仓库以 MIT 许可发布。模型、训练数据与 `modeling_openjev.py` 的功劳全归其作者。
 
 TypeSafe、Jev、System One Model 是 TypeSafe AI 的商标与命名，本仓库与其无隶属关系。

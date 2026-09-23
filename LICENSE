@@ -19,11 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-Note on third-party material: this repository does not vendor model weights or
-upstream modeling code. `setup.sh` downloads them at run time from the
-`AlexWortega/openjev` model repository on Hugging Face, which is published
-under the MIT license. All credit for the model, the training data and
-`modeling_openjev.py` belongs to its authors.
